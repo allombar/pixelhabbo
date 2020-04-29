@@ -1,0 +1,824 @@
+/**
+PixelHabbo
+Wolpeur
+2020
+*/
+
+body, html{
+    height: 100%;
+}
+
+.alert-error{
+    background-color: #e3342f;
+    font-family: 'Ubuntu Condensed';
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.alert-succes-habbo{
+    background-color: #49a74d;
+    font-family: 'Ubuntu Condensed';
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+/** End administration **/
+a:hover{
+    color: #fff !important;
+}
+
+.color-gray{
+    color: #999999;
+    font-size: 0.9rem;
+}
+
+.bg-blue{
+    background-color: #004f9e;
+}
+
+.nav-px{
+    font-family: 'Ubuntu Condensed' !important;
+    font-size: 1.4rem;
+    text-transform: uppercase !important;
+    vertical-align: middle;
+    display: contents;
+}
+
+li.px{
+    list-style: none;
+    display: inline-block;
+}
+
+li.px > a{
+    transition: all .2s ease-in-out; 
+    display: inline-block;
+    vertical-align: middle;
+}
+
+li.px > a:hover{
+    transition: 0.5s;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.btn-login{
+    background-color: #003366a6 !important;
+    color: #fff !important;
+    font-family: 'Ubuntu Condensed' !important;
+    font-size: 1.1rem !important;
+    border: solid 2px #3399cc !important;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2), inset 1px 1px 0px rgba(0, 0, 0, 0.2), inset -1px -1px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 11px !important;
+    position: relative;
+}
+
+.btn-login:before{
+    content: '';
+    border-left: solid 1px #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -13px;
+}
+
+.icon-home,.icon-shop,.icon-community{
+    position: relative;
+}
+
+.icon-home:before{
+    background-image: url(../images/sprite.png);
+    background-position: -433px -434px;
+    width: 22px;
+    height: 22px;
+    content: '';
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.icon-shop:before{
+    background-image: url(../images/sprite.png);
+    background-position: -410px -434px;
+    width: 22px;
+    height: 22px;
+    content: '';
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.icon-community:before{
+    background-image: url(../images/sprite.png);
+    background-position: -247px -163px;
+    width: 22px;
+    height: 22px;
+    content: '';
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.icon-about:before{
+    background-image: url(../images/sprite.png);
+    background-position: -265px -434px;
+    width: 22px;
+    height: 22px;
+    content: '';
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.color-blue{
+    color: #66ccff;
+}
+
+.color-blue-2{
+    color: #7ecaee;
+}
+
+.text-login{
+    font-size: 1rem;
+}
+
+#background-auth{
+    background-image: url(../images/login/appart.png);
+    position: fixed;
+    background-position: 660px 9px;
+    width: 537px;
+    height: 379px;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.title-login{
+    font-size: 3.2rem;
+    font-weight: 200;
+}
+
+.p-login{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: -11px;
+}
+
+.input-habbo{
+    background-color: #cccccc !important;
+    border-radius: 8px !important;
+    border: none !important;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2) !important;
+    width: 100%;
+    padding: 1.5rem 1rem !important;
+    font-size: 1.2rem !important;
+}
+
+.input-habbo:hover, .btn-habbo:hover{
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+.input-habbo:active{
+    transition: 0.5s;
+    border: solid 1px #000 !important;
+}
+
+.btn-habbo{
+    box-shadow: 0 3px 0 1px rgba(0, 0, 0, 0.3) !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    background-color: #0f7dbc;
+    border: solid 2px #2a9cde !important;
+    color: #fff !important;
+    padding: 12px 24px !important;
+    font-size: 1.1rem !important;
+    border-radius: 11px !important;
+}
+
+.btn-habbo:active{
+    box-shadow: 0px 2px 0px 1px rgba(0, 0, 0, 0.3) !important;
+}
+
+.hotel-btn{
+    font-size: 1.5rem!important;
+}
+
+.btn-habbo.green{
+    background-color: #00813e;
+    border: solid 2px #8eda55!important;
+    text-transform: uppercase;
+}
+
+.btn-habbo.red{
+    background-color: #AC1A4F;
+    border:solid 2px #F37387!important;
+}
+
+.btn-register{
+    font-size: 2rem!important;
+}
+
+@media (min-width: 959px){
+    .registration-form:before {
+        -ms-interpolation-mode: bicubic;
+        image-rendering: pixelated;
+        background: url(../images/register/image.png);
+        content: '';
+        display: block;
+        height: 465px;
+        width: 546px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+
+.avatar-circle{
+    display: inline-block;
+    box-shadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.2); 
+    border: solid 2px #336699;
+    background-color:#003399;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.avatar-circle > img{
+    position: absolute;
+    top: -7px;
+    left: -1px;
+}
+
+.dropdown-toggle-habbo:after{
+    content: '';
+    background-image: url(../images/sprite.png);
+    background-position: -511px -316px;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 18px;
+    margin-left: 11px;
+}
+
+.me-circle{
+    background-color: #006699;
+    border: solid 2px #3366cc;
+}
+
+.username-me{
+    font-weight: 100;
+}
+
+.motto-me{
+    color: #eee;
+}
+
+
+.monnaie{
+    font-family: 'Ubuntu condensed';
+    font-size: 1.2rem;
+}
+
+.monnaie:after{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.monnaie.credit:after{
+    background-image: url(../images/profil/credit.png);
+    width: 15px;
+    height: 15px;
+}
+
+.monnaie.pixel:after{
+    background-image: url(../images/profil/pixel.png);
+    width: 13px;
+    height: 13px;
+}
+
+.section-title{
+    background-color: #003366;
+    height: 100px;
+    text-align: right;
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-right: 3rem;
+}
+
+.section-title.newstitle{
+    background-image: url(../images/1.png);
+}
+
+.section-title.toptitle{
+    background-image: url(../images/2.png);  
+}
+
+.section-title.toptitle-2{
+    background-image: url(../images/3.gif);  
+}
+
+.section-title.shoptitle{
+    background-image: url(../images/4.png);
+}
+
+.section-title > h1{
+    line-height: 100px;
+    font-family: 'Ubuntu Condensed';
+    font-weight: 300;
+    font-size: 3.1rem;
+    text-transform: uppercase;
+}
+
+.new-item-last{
+    height: 300px;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+}
+
+.new-item-last h2{
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    width: 67%;
+    text-align: justify;
+}
+
+.new-item-last-shortbody{
+    font-weight: lighter;
+    font-size: 1.5rem;
+    font-family: 'Ubuntu condensed';
+}
+
+ul.list-item-news{
+    list-style-type: none;
+}
+
+ul.list-item-news > li{
+    display: block;
+    height: 89px;
+    width: 100%;
+}
+
+.img-mini-new-list{
+    height: 89px;
+    width: 89px;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.img-mini-new-list-community{
+    height: 140px;
+    width: 140px;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.hotel-button {
+    display: inline-block;
+    line-height: 1.2;
+    text-align: center;
+    background-color: #ffb900;
+    border-color: #ffea00;
+    color: #000;
+    border-radius: 5px 0 0 5px;
+    border-width: 2px 1px 2px 2px;
+    border-style: solid;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    filter: drop-shadow(-1px 4px 0 rgba(0, 0, 0, .3));
+    box-shadow: none;
+    position: relative;
+    margin-right: 20px;
+    margin-top: -3px;
+    padding: 6px 12px 6px 24px;
+}
+
+.hotel-button:after, .hotel-button:before {
+    border-style: solid;
+    position: absolute;
+    display: block;
+    content: '';
+}
+
+.hotel-button:before {
+    border-width: 21px;
+    top: -2px;
+    border-color: transparent transparent transparent #ffea00;
+    right: -43px;
+}
+
+.hotel-button:after {
+    border-width: 19px;
+    top: 0;
+    border-color: transparent transparent transparent #ffb900;
+    right: -38px;
+}
+
+.hotel-button__text {
+    position: relative;
+    padding-right: 27px;
+    text-align: right;
+    line-height: 26px;
+}
+
+.hotel-button__text:before {
+    background-image: url(../images/sprite.png);
+    background-position: -242px -434px;
+    width: 21px;
+    height: 26px;
+    content: '';
+    display: block;
+    margin-top: -13px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
+.hotel-button:hover {
+    background-color: #ffd400;
+    border-color: #fffd70;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hotel-button:hover:before {
+    border-color: transparent transparent transparent #fffd70;
+}
+
+.hotel-button:hover:after {
+    border-color: transparent transparent transparent #ffd400;
+}
+
+.circle-staff-look {
+    margin: auto;
+    background-color: rgb(19, 55, 90);
+    border-radius: 50%;
+    height: 107px;
+    width: 105px;
+    background-position: center -22px;
+    background-repeat: no-repeat;
+    border: solid 2px rgba(0, 0, 0, 0.3);
+}
+
+.username-staff{
+    font-size: 1.5rem;
+}
+
+.box-staff{
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow:  2px 2px 0px rgba(0, 0, 0, 0.4);
+}
+
+.box-staff .rank-staff{
+    background-color: rgb(19, 55, 90);
+    padding: 1rem;
+    font-family: 'Ubuntu Condensed';
+    font-size: 1.3rem;
+}
+
+/* Thème box */
+.title-box{
+    background-color: #0e3955;
+    text-shadow: 0 1px #000;
+    background-color: #0e3955;
+    margin: -24px -12px 12px;
+    padding: 6px 12px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: 'Ubuntu Condensed';
+}
+
+.box-body{
+    padding: 24px 12px;
+    background-color: #0b6395;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.text-habbo{
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.form-box{
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1.6rem;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.sub-title-form-box {
+    color: #fff;
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.title-mini-transform{
+    font-family: 'Ubuntu Condensed';
+    text-transform: uppercase;
+}
+
+/* End thème habbo box*/
+
+.show-background-new{
+    height: 150px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.top-first-user{
+    background-image: url(../images/top/podium.png);
+    width: 63px;
+    height: 182px;
+    background-position: 139px 84px;
+    background-repeat: repeat-x;
+}
+
+.top-data-box{
+    background-color: #0E3D5E;
+    border-radius: 55px;
+    display: block;
+    width: 25%;
+    text-align: center;
+    padding: 7px;
+    margin-top: 2%;
+    margin-left: 1%;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+    border: solid 2px rgba(0, 0, 0, 0.3);
+}
+
+.setting-title:before {
+    content: '';
+    background-image: url(../images/auth/settings/icon.png);
+    width: 17px;
+    height: 22px;
+    position: absolute;
+    right: -24px;
+    top: 7px;
+}
+
+.setting-title-2:before {
+    content: '';
+    background-image: url(../images/auth/settings/icon-2.png);
+    width: 17px;
+    height: 22px;
+    position: absolute;
+    right: -24px;
+    top: 7px;
+}
+
+.list-group-setting{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    margin-bottom: 0.4rem;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.list-group-setting:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.list-group-setting.active{
+    color: #fff;
+    background-color: #ffb900;
+}
+
+@media (min-width: 959px){
+    .forgot-form:before {
+        -ms-interpolation-mode: bicubic;
+        image-rendering: pixelated;
+        background: url(../images/hotel.png);
+        content: '';
+        display: block;
+        height: 424px;
+        width: 630px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index:-1;
+    }
+}
+
+.box-shop-home:after {
+    content: '';
+    right: 7px;
+    bottom: 0px;
+    z-index: -4;
+    position: absolute;
+    width: 396px;
+    height: 193px;
+    background-image: url(../images/shop/home.png);
+}
+
+#avatar-shop {
+    margin-top: -43px;
+    filter: drop-shadow(3px 1px 0 #fff) drop-shadow(-3px 2px 0 #fff) drop-shadow(0 -3px 0 #fff);
+}
+
+.premium-title:after {
+    content: '';
+    background-image: url(../images/shop/title-premium.png);
+    width: 39px;
+    height: 41px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -6px 0 0 13px;
+}
+
+.subtitle-shop{
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.16);
+    color: #fff;
+    font-family: 'Ubuntu Condensed';
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.text-shop{
+    font-size: 1.1rem;
+    font-family: 'Ubuntu Condensed';
+}
+
+.item-shop-list{
+    background-color: #0A466E;
+    border: solid 2px #3A8DB3;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.4);
+    padding: 12px 25px;
+    margin-bottom: 39px;
+    position: relative;
+}
+
+.item-shop-list.item1:after{
+    content: '';
+    background-image: url(../images/shop/item1.gif);
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -34px;
+    right: -32px;
+}
+
+.item2, .item4{
+    padding-left: 133px;
+}
+
+.item-shop-list.item2:before{
+    content: '';
+    background-image: url(../images/shop/item2.gif);
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -16px;
+    left: -32px;
+}
+
+.item-shop-list.item3:before{
+    content: '';
+    background-image: url(../images/shop/item3.gif);
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -30px;
+    right: -32px;
+}
+
+.item-shop-list.item4:before{
+    content: '';
+    background-image: url(../images/shop/item4.gif);
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -30px;
+    left: -32px;
+}
+
+.item5{
+    padding-right: 118px;
+}
+
+.item-shop-list.item5:before{
+    content: '';
+    background-image: url(../images/shop/item5.gif);
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: -20px;
+    right: -32px;
+}
+
+.item-shop-list > h3{
+    color: #4388AD;
+    font-family: 'Ubuntu Condensed';
+}
+
+.item-shop-list > p{
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #fff;
+    font-family: 'Ubuntu Condensed';
+}
+
+.stat-pixel{
+    color: #fff;
+    font-weight: bold;
+    background-color: #2A2821;
+    border-radius: 6px;
+    border: solid 3px #54524C;
+    padding: 7px 19px;
+    text-align: center;
+    position: relative;
+    font-size: 19px;
+    box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.footer-pixelhabbo{
+    background-color: #001726;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.footer-pixelhabbo ul.social{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-pixelhabbo ul.social li{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer-pixelhabbo ul.social li a i.iconfb{
+    background-image: url(../images/sprite.png);
+    background-position: -332px -315px;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.footer-pixelhabbo ul.social li a i.icontw{
+    background-image: url(../images/sprite.png);
+    background-position: -300px -347px;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.footer-pixelhabbo ul.social li a i.iconit{
+    background-image: url(../images/sprite.png);
+    background-position: -300px -315px;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+p.footer-copy{
+    font-size: 12px;
+    color: #425c73;
+}
+
+a.link-footer{
+    color: #a1b5c8;
+    padding-right: 0.5rem;
+    font-size: 0.8rem;
+}
+
+@media (min-width: 532px){
+    .align-right {
+        float: right;
+        margin: 12px 0 12px 24px;
+    }
+}
+
+.about h1, .about h2{
+    font-size: 43px;
+    text-transform: uppercase;
+    font-family: 'Ubuntu Condensed';
+}
+
+.about h3{
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Ubuntu Condensed';
+}
+
+.about p{
+    color: #7ecaee;
+    font-size: 1rem;
+}
+
+.about hr {
+    border-width: 0 0 8px!important;
+    clear: both!important;
+    margin: 1.35em auto!important;
+    max-width: 100%!important;
+}

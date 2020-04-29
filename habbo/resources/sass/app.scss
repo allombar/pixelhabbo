@@ -1,0 +1,23 @@
+// Font Ubuntu
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+
+// Custom Bootstrap
+$body-bg: #0066cc; // Body Background-color
+$body-color: #fff; // Color body
+$font-family-base: 'Ubuntu', sans-serif; // Font-family
+
+// Pretty Checkbox
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// PixelHabbo
+@import '../../public/css/template.css';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
